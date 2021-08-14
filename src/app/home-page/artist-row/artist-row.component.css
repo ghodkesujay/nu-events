@@ -1,0 +1,13 @@
+/* Artist CSS starts below */
+.artist-container {
+    list-style-type: none;
+  }
+  .artist-container li {
+    display: inline-block;
+  }
+  .artist-container li div img {
+    height: 170px;
+    border-radius: 50%;
+    margin: 15px;
+  }
+  /* Artist CSS ends above this line */

@@ -1,0 +1,40 @@
+:host{
+    display: block;
+}
+
+.filter-area{
+    height: 90vh;
+    background-color: #ffff;
+}
+
+.date-filed{
+    width: 255px;
+    margin-bottom: -8px
+}
+
+.search-field{
+    margin: 10px 10px 0px 22px;
+    width: 255px;
+    margin-bottom: -8px
+}
+
+.dates-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+
+  .date-filter{
+    padding: 10px 10px 0px 22px;
+  }
+
+  .online-checkbox{
+    margin: 15px 10px 0px 22px; 
+  }
+
+  .select-theme , .select-category{
+    padding: 10px 10px 0px 22px;
+    width: 285px;
+    margin-bottom: -8px;
+    height: 90px;
+  }

@@ -1,0 +1,17 @@
+<h5 mat-dialog-title>{{data.evname}}</h5>
+<button mat-icon-button mat-dialog-close class="dialog-close-button">
+    <mat-icon>close</mat-icon>
+</button>
+<hr>
+
+<mat-dialog-content>
+    <h5 class="description-header">Description</h5>
+    <p class="description">{{data.description}}</p>
+
+    <label class="time-lable"><strong>Date and Time</strong><span>{{data.date}}</span></label>
+    <br>
+    <label class="time-lable"> <strong>Location</strong><span>{{data.location}}</span></label>
+    <br>
+    <label class="time-lable"> <strong>Genre</strong> <span>{{data.genre}}</span></label>
+
+</mat-dialog-content>

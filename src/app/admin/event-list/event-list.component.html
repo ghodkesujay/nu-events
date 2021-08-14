@@ -1,0 +1,78 @@
+<div class="list row" style="text-align: center; width: 50%; margin-left: 25%;">
+    <div class="col-md-8">
+      
+      <!-- <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by title"
+          [(ngModel)]="title"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchTitle()"
+          >
+            Search
+          </button>
+        </div>
+      </div> -->
+      <h4 style="margin-left: 50%;">
+        ADMINISTRATOR PANEL
+      </h4>
+      <br>
+      <button class="btn btn-success" [routerLink]="['/admin']" style="float: left; margin-left: 60%;" >Add New Event</button>
+      <br><br>
+
+
+    </div>
+    <div class="col-md-6">
+      <h4>List of Events</h4>
+      <br>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let event of events; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveEvent(event, i)"
+        >
+          {{ event.evname }}
+        </li>
+      </ul>
+  
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllEvents()">
+        Remove All
+      </button>
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="currentTutorial">
+        <h4>Selected Event</h4>
+        <br>
+        <div>
+          <label><strong>Event Name:</strong></label> {{ currentTutorial.evname }}
+        </div>
+        <div>
+          <label><strong>Description:</strong></label>
+          {{ currentTutorial.description }}
+        </div>
+        <!-- <div>
+          <label><strong>Status:</strong></label>
+          {{ currentTutorial.published ? "Published" : "Pending" }}
+        </div> -->
+  
+        <!-- <a class="badge badge-warning" routerLink="/events/{{ currentTutorial.id }}"> -->
+        <a class="badge badge-warning" routerLink="/admineventlist/{{ currentTutorial.id }}" >
+          Edit
+        </a>
+      </div>
+  
+      <div *ngIf="!currentTutorial">
+        <br />
+        <br>
+        <p><b>Please click on any event from the list on left side.</b></p>
+        <p>The details of the selected event will be shown here.</p>
+      </div>
+    </div>
+  </div>
+  

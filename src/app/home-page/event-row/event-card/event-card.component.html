@@ -1,0 +1,17 @@
+<div class="card" style="width: 25rem; height: 45rem">
+
+    <div class="card-body" id="cardtry" style="font-family: Garamond, serif;">
+        <div class="card-header">
+         <h4>{{event.evname}}</h4>   
+          </div>
+        <img [src]="event.cardImageUrl" class="card-img-top" alt="{{event.evname}} " style="height: 12em;width:20em;">
+        <p class="card-text">{{event.description}}</p>
+        <p class="card-text"><strong>Location :</strong> :{{event.location}}</p>
+        <p class="card-text"><strong>Date :</strong>{{event.date}}</p>
+         <a class="btn btn-primary" 
+         [routerLink]="['/events',event.id]"
+         routerLinkActive="active">Book</a>
+    </div>
+</div> 
+
+

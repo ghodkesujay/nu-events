@@ -1,0 +1,66 @@
+<h5 class="ml-5">All Events</h5>
+
+<div class="row">
+    <div class="col-md-3">
+
+        <div class="filter-area ml-5 mt-3">
+
+            <mat-form-field class="search-field">
+                <mat-label>Search Event</mat-label>
+                <input [formControl]="filterControl" matInput type="text">
+                <button mat-button matSuffix mat-icon-button aria-label="search">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </mat-form-field>
+            <hr>
+
+            <!-- <div class="date-filter">
+                <label>Dates</label>
+
+                <mat-radio-group class="dates-radio-group" (change)="daySelectionChange($event)">
+                    <mat-radio-button value="">All</mat-radio-button>
+                    <mat-radio-button value="tomorrow">Tomorrow</mat-radio-button>
+                    <mat-radio-button value="weekend">This Weekend</mat-radio-button>
+                </mat-radio-group>
+
+                <mat-form-field appearance="outline" class="date-filed">
+                    <mat-label>Ending After</mat-label>
+                    <input type="text" matInput>
+                </mat-form-field>
+            </div> -->
+            <hr>
+
+            <!-- <section class="online-checkbox">
+                <mat-checkbox>Online</mat-checkbox>
+            </section>
+
+            <hr> -->
+
+            <!-- <mat-form-field appearance="outline" class="select-theme">
+                <mat-label>Select Theme</mat-label>
+                <mat-select>
+                    <mat-option [value]="">Theme 1</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <hr> -->
+
+            <mat-form-field appearance="outline" class="select-category">
+                <mat-label>Select Category</mat-label>
+                <mat-select (selectionChange)="categoryChange($event)">
+                    <mat-option>All</mat-option>
+                    <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+        </div>
+
+    </div>
+
+    <div class="col-md-9">
+        <div class="row">
+            <app-all-event-card *ngFor="let eventEl of filteredEvent;let i = index;" [event]="eventEl" [index]="i">
+            </app-all-event-card>
+        </div>
+    </div>
+</div>

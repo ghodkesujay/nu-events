@@ -1,0 +1,19 @@
+<h3 style="margin-left: 40%; float: left;">Featured Events</h3>
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col" style="float: right;"></div>
+        <button class="btn btn-info"
+        [routerLink]="['/events']">View more Events</button>
+    </div>
+    <br>
+    <div class="row">
+    <div class="card-group card-group-scroll">
+        <app-event-card *ngFor="let eventEl of even.slice(0,5);let i = index;" 
+        [event]="eventEl"
+        [index]="i"
+        ></app-event-card>
+    </div>
+</div>
+</div>
+<hr>

@@ -1,0 +1,25 @@
+<form [formGroup]="loginForm" class="d-flex flex-column login-form">
+    <h5 class="header mb-3">Signin</h5>
+
+    <mat-form-field appearance="legacy">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter email" formControlName="email">
+        <mat-error *ngIf="formControls.email.errors?.required">Email is Required</mat-error>
+        <mat-error *ngIf="formControls.email.errors?.email">Invalid Email</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="legacy">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Enter Password" formControlName="password">
+        <mat-error>Password is Required</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="userSignin()" [disabled]="loginForm.invalid" class="mt-3">
+        Signin as User</button>
+
+    <button mat-raised-button color="primary" (click)="adminSignin()" [disabled]="loginForm.invalid" class="mt-3">
+        Signin as Admin</button>
+
+    <button mat-raised-button color="accent" routerLink="/signup" class="mt-3">Signup</button>
+</form>

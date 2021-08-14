@@ -1,0 +1,11 @@
+<h3>Genre</h3>
+<a routerLinkActive="active">
+<div class="container">
+    <div class="card-deck">
+        <app-genre-card *ngFor="let genreEl of genres"
+        [genre]="genreEl"> 
+        </app-genre-card>
+    </div>
+</div> 
+</a>
+<hr>

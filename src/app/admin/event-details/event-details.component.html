@@ -1,0 +1,125 @@
+<div *ngIf="currentTutorial" class="edit-form" style="text-align: center; width: 50%; margin-left: 25%;">
+    <h4>Selected Event</h4>
+    <form>
+      <br>
+      <div class="form-group">
+        <label for="title">Event Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentTutorial.evname"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="cardImageUrl">Card Image URL</label>
+        <input
+          type="text"
+          class="form-control"
+          id="cardImageUrl"
+          [(ngModel)]="currentTutorial.cardImageUrl"
+          name="cardImageUrl"
+        />
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input
+          type="text"
+          class="form-control"
+          id="location"
+          [(ngModel)]="currentTutorial.location"
+          name="location"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentTutorial.description"
+          name="description"
+        />
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input
+          type="text"
+          class="form-control"
+          id="date"
+          [(ngModel)]="currentTutorial.date"
+          name="date"
+        />
+      </div>
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="genre"
+          [(ngModel)]="currentTutorial.genre"
+          name="genre"
+        />
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          [(ngModel)]="currentTutorial.price"
+          name="price"
+        />
+      </div>
+      <div class="form-group">
+        <label for="artist">Artist</label>
+        <input
+          type="text"
+          class="form-control"
+          id="artist"
+          [(ngModel)]="currentTutorial.artist"
+          name="artist"
+        />
+      </div>
+  
+      <!-- <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentTutorial.published ? "Published" : "Pending" }}
+      </div> -->
+    </form>
+  
+    <!-- <button
+      class="badge badge-primary mr-2"
+      *ngIf="currentTutorial.published"
+      (click)="updatePublished(false)"
+    >
+      UnPublish
+    </button>
+    <button
+      *ngIf="!currentTutorial.published"
+      class="badge badge-primary mr-2"
+      (click)="updatePublished(true)"
+    >
+      Publish
+    </button> -->
+  
+    <button class="badge badge-danger mr-2" (click)="deleteEvent()">
+      Delete
+    </button>
+  
+    <button type="submit" class="badge badge-success" (click)="updateEvent()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+
+    <br>
+    <button class="btn btn-success" [routerLink]="['/admineventlist']">Check All Posted Events</button>
+    <br><br>
+  </div>
+  
+  <div *ngIf="!currentTutorial">
+    <br />
+    <p>Cannot access this Event...</p>
+  </div>
+  

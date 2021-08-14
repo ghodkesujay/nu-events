@@ -1,0 +1,13 @@
+#form-control {
+    background-color: blueviolet;
+    position: relative;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#form-group {
+    background-color: blueviolet;
+    position: absolute;
+    text-align: left;
+    margin-left: 10px;
+}

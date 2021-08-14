@@ -1,0 +1,32 @@
+.dialog-close-button{
+    float: right;
+    right: -10px;
+    top: -50px;
+    position: relative;
+}
+
+.mat-dialog-title{
+    line-height: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+}
+
+
+.description-header{
+    margin-top: .5rem;
+}
+
+.description{
+    margin-top: .3rem;
+}
+
+.time-lable strong{
+    font-size: 15px;
+    color: #f54f60;
+}
+
+.time-lable span{
+    font-size: 14px;
+   margin-left: 5px;
+}

@@ -1,0 +1,36 @@
+<!-- <div class="card" style="width: 25rem; height: 45rem">
+
+  <div class="card-body" id="cardtry" style="font-family: Garamond, serif;">
+    <div class="card-header">
+      <h4></h4>
+    </div>
+    <img [src]="event.cardImageUrl" class="card-img-top"  style="height: 12em;width:20em;">
+    <p class="card-text"></p>
+    <p class="card-text"><strong>Location :</strong> :</p>
+    <p class="card-text"><strong>Date :</strong>{{event.date}}</p>
+    <a class="btn btn-primary" [routerLink]="['/events',event.id]" routerLinkActive="active">Book</a>
+  </div>
+</div> -->
+
+<mat-card class="event-card m-3" (click)="openEventDetail()">
+  <img mat-card-image [src]="event.cardImageUrl" alt="{{event.evname}}">
+  <mat-card-content>
+    <p class="event-detail">{{event.description}}</p>
+
+    <label class="event-time">
+      <mat-icon class="calendar-icon">calendar_today</mat-icon>
+      <span> {{event.date}}</span>
+    </label>
+    <br>
+    <label class="event-time">
+      <mat-icon class="location-icon">location_on</mat-icon>
+      <span>{{event.location}}</span>
+    </label>
+  </mat-card-content>
+
+  <mat-card-actions class="d-flex">
+    <!-- <div class="event-venue-cover"></div> -->
+    <button mat-button [routerLink]="['/events',event.id]" color="accent">Book</button>
+    <label class="event-venue">{{event.evname}}</label>
+  </mat-card-actions>
+</mat-card>

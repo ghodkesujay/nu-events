@@ -1,0 +1,31 @@
+h3 {
+    text-align: center;
+    
+}
+
+#cardtry>img {
+    padding-left: 40px;
+    height: 10em;
+    width: 15em;
+}
+
+#formItems {
+    float: left;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#formButton {
+    align-items: left;
+}
+
+
+@media (min-width: 576px) {
+    .card-group.card-group-scroll {
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+    }
+    .card-group.card-group-scroll>.card {
+        flex-basis: 35%;
+    }
+}

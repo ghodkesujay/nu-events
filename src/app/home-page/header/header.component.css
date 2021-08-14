@@ -1,0 +1,38 @@
+.navbar .btn {
+    float: left;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: hsl(0, 86%, 58%);
+}
+
+.navbar-brand>img {
+    width: 400px;
+    height: 80px;
+    ;
+}
+
+.navbar .btn {
+    background-color: #db393e;
+}
+
+.navbar .btn:hover {
+    background-color: #000;
+}
+
+.dropdown-menu {
+    text-align: center;
+    font-weight: 700;
+    padding: 26px 12px;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+   
+    pointer-events: none;
+    color: #bb0000;
+}

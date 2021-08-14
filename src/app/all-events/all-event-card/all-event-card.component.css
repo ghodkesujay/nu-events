@@ -1,0 +1,69 @@
+:host{
+    display: block;
+}
+
+  .event-card {
+    max-width: 350px;
+    padding-right: 0px;
+    cursor: pointer;
+  }
+
+
+  .event-detail{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400px;
+  }
+
+.mat-card-image:first-child {
+    max-width: 105% !important;
+    width: auto;
+}
+
+.location-icon {
+    font-size: 15px !important;
+    width: 17px !important;
+    height: 12px !important;
+}
+
+.calendar-icon{
+    font-size: 13px !important;
+    width: 15px !important;
+    height: 14px !important;
+}
+
+.event-time{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+label{
+    line-height: 0;
+    margin-bottom: .1rem;
+}
+
+.mat-card-actions {
+   margin: 0 0 -16px -16px !important;
+   padding: 10px 10px 10px 25px !important;
+   background-color: #f2f2f2;
+}
+
+.event-venue-cover {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .event-venue{
+    line-height: 0;
+    margin-top: 19px;
+    margin-left: 9px;
+    font-weight: 400;
+    font-size: 15px;
+  }

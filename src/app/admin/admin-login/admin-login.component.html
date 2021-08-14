@@ -1,0 +1,22 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()" class="d-flex flex-column login-form">
+    <h5 class="header mb-3">Admin Login</h5>
+
+    <mat-form-field appearance="legacy">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter email" formControlName="email">
+        <mat-error *ngIf="formControls.email.errors?.required">Email is Required</mat-error>
+        <mat-error *ngIf="formControls.email.errors?.email">Invalid Email</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="legacy">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Enter Password" formControlName="password">
+        <mat-error>Password is Required</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="loginForm.invalid" class="mt-3">Login</button>
+
+    <button mat-raised-button color="accent" routerLink="/signup" class="mt-3">Signup</button>
+
+</form>
